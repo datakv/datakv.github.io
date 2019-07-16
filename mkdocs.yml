@@ -1,3 +1,7 @@
-site_name: My Docs
-theme: windmill
+site_name: Data KV
+# theme: windmill
 # pip install mkdocs-windmill
+
+site_description: 技术杂学
+site_author: datakv
+site_url: https://datakv.github.io
