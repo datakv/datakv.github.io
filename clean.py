@@ -11,7 +11,7 @@ for line in list:
     else :
         os.system("rm -rf " + line)
 
-exit(0)
+# exit(0)
 
 os.system("mkdocs build")
 os.system("mv site/* ./")
