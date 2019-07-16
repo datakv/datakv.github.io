@@ -1,6 +1,9 @@
 site_name: Data KV
+
 # theme: windmill
 # pip install mkdocs-windmill
+theme: material
+# pip install mkdocs-material
 
 site_description: 技术杂学
 site_author: datakv

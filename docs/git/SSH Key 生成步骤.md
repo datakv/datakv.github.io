@@ -1,18 +1,17 @@
 
 
-ssh-keygen
+# ssh-keygen 生成步骤
 
 Git是分布式的代码管理工具，远程的代码管理是基于SSH的，所以要使用远程的Git则需要SSH的配置。
 github的SSH配置如下：
-一 、
-设置Git的user name和email：
+### 一 、设置Git的user name和email：
 ```
 git config --global user.name “datakv”
 git config --global user.email “datakv@126.com”
 ```
 
 
-二、生成SSH密钥过程：
+### 二、生成SSH密钥过程：
 1.查看是否已经有了ssh密钥：cd ~/.ssh
 如果没有密钥则不会有此文件夹，有则备份删除
 2.生存密钥：
