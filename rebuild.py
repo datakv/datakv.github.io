@@ -23,5 +23,7 @@ os.system("mv site/* ./")
 
 os.system("git add *")
 os.system("git rm $(git ls-files --deleted)")
+os.system("git commit -m \"feat:update\"")
+os.system("git push origin master")
 
 
