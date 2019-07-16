@@ -1,13 +1,16 @@
 site_name: 技术杂谈
 
-# theme: windmill
+# theme: windmill # 顶层导航
 # pip install mkdocs-windmill
 
-#theme: material
+#theme: material # 左侧导航 但是又弹效果
 # pip install mkdocs-material
 
-theme: cinder
+# theme: cinder # 顶层导航
 # pip install mkdocs-cinder
+
+theme: rtd-dropdown
+# pip install mkdocs-rtd-dropdown
 
 site_description: 各种互联网软件技术积累总结
 site_author: datakv
