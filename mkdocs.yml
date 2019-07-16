@@ -9,8 +9,12 @@ site_name: 技术杂谈
 # theme: cinder # 顶层导航
 # pip install mkdocs-cinder
 
-theme: rtd-dropdown
+# theme: rtd-dropdown
 # pip install mkdocs-rtd-dropdown
+
+theme:
+    name: readthedocs
+    highlightjs: true
 
 site_description: 各种互联网软件技术积累总结
 site_author: datakv
