@@ -7,23 +7,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <meta name="author" content="datakv">
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>命令cut - 技术杂谈</title>
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+  <title>PyQt5-02-定义按钮事件 - 技术杂谈</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u547d\u4ee4cut";
-    var mkdocs_page_input_path = "linux/\u547d\u4ee4cut.md";
-    var mkdocs_page_url = "/linux/\u547d\u4ee4cut/";
+    var mkdocs_page_name = "PyQt5-02-\u5b9a\u4e49\u6309\u94ae\u4e8b\u4ef6";
+    var mkdocs_page_input_path = "python/qt/PyQt5-02-\u5b9a\u4e49\u6309\u94ae\u4e8b\u4ef6.md";
+    var mkdocs_page_url = "/python/qt/PyQt5-02-\u5b9a\u4e49\u6309\u94ae\u4e8b\u4ef6/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
@@ -36,9 +36,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> 技术杂谈</a>
+        <a href="../../.." class="icon icon-home"> 技术杂谈</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
@@ -50,7 +50,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../..">Welcome to datakv space</a>
+    <a class="" href="../../..">Welcome to datakv space</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -59,7 +59,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../git/SSH Key 生成步骤/">ssh-keygen 生成步骤</a>
+    <a class="" href="../../../git/SSH Key 生成步骤/">ssh-keygen 生成步骤</a>
                 </li>
     </ul>
 	    </li>
@@ -70,7 +70,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../golang/golang生态/">golang生态</a>
+    <a class="" href="../../../golang/golang生态/">golang生态</a>
                 </li>
     </ul>
 	    </li>
@@ -79,31 +79,17 @@
 		
     <span class="caption-text">Linux</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">命令cut</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#cut">命令cut</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#_1">用途</a></li>
-        
-            <li><a class="toctree-l4" href="#_2">使用</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../../linux/命令cut/">命令cut</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../命令seq/">命令seq</a>
+    <a class="" href="../../../linux/命令seq/">命令seq</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../性能观测/">性能观测</a>
+    <a class="" href="../../../linux/性能观测/">性能观测</a>
                 </li>
     </ul>
 	    </li>
@@ -114,19 +100,33 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../python/使用python设置服务器共享文件/">使用python设置服务器共享文件</a>
+    <a class="" href="../../使用python设置服务器共享文件/">使用python设置服务器共享文件</a>
                 </li>
-                <li class="">
+                <li class=" current">
                     
     <span class="caption-text">Qt</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../../python/qt/PyQt5-01-环境搭建/">PyQt5-01-环境搭建</a>
+    <a class="" href="../PyQt5-01-环境搭建/">PyQt5-01-环境搭建</a>
                 </li>
-                <li class="toctree-l3">
+                <li class="toctree-l3 current">
                     
-    <a class="" href="../../python/qt/PyQt5-02-定义按钮事件/">PyQt5-02-定义按钮事件</a>
+    <a class="current" href="./">PyQt5-02-定义按钮事件</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#pyqt5-02-">PyQt5-02-定义按钮事件</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#1">1、在生成的窗体类里边添加成员函数：</a></li>
+        
+            <li><a class="toctree-l5" href="#2">2、关联事件：</a></li>
+        
+        </ul>
+    
+
+    </ul>
                 </li>
     </ul>
                 </li>
@@ -139,7 +139,7 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../写作/simiki的使用/">simiki的使用</a>
+    <a class="" href="../../../写作/simiki的使用/">simiki的使用</a>
                 </li>
     </ul>
 	    </li>
@@ -154,7 +154,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">技术杂谈</a>
+        <a href="../../..">技术杂谈</a>
       </nav>
 
       
@@ -162,15 +162,19 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+    <li><a href="../../..">Docs</a> &raquo;</li>
     
       
         
-          <li>Linux &raquo;</li>
+          <li>Qt &raquo;</li>
+        
+      
+        
+          <li>Python &raquo;</li>
         
       
     
-    <li>命令cut</li>
+    <li>PyQt5-02-定义按钮事件</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -180,51 +184,17 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="cut">命令cut</h1>
-<h3 id="_1">用途</h3>
-<p>Linux cut命令用于显示每行从开头算起 num1 到 num2 的文字。</p>
-<pre><code>$ cat r2.txt
-COMMAND    PID     U
-loginwind  109 wench
-loginwind  109 wench
-loginwind  109 wench
-loginwind  109 wench
-loginwind  109 wench
-loginwind  109 wench
-loginwind  109 wench
-loginwind  109 wench
-loginwind  109 wench
+                <h1 id="pyqt5-02-">PyQt5-02-定义按钮事件</h1>
+<h3 id="1">1、在生成的窗体类里边添加成员函数：</h3>
+<pre><code>    def firtPyQt5_button_click(self):
+        QtWidgets.QMessageBox.information(self.pushButton, &quot;标题&quot;, &quot;这是第一个PyQt5 GUI程序&quot;)
+
 </code></pre>
 
-<pre><code>$ cut -b 1-9 r2.txt
-COMMAND
-loginwind
-loginwind
-loginwind
-loginwind
-loginwind
-loginwind
-loginwind
-loginwind
-loginwind
-</code></pre>
+<h3 id="2">2、关联事件：</h3>
+<p>在 def setupUi(self,):里 的 self.retranslateUi(*)前添加：</p>
+<pre><code>        self.pushButton.clicked.connect(self.firtPyQt5_button_click)
 
-<h3 id="_2">使用</h3>
-<ul>
-<li>-b ：以字节为单位进行分割。这些字节位置将忽略多字节字符边界，除非也指定了 -n 标志。</li>
-<li>-c ：以字符为单位进行分割。</li>
-<li>-d ：自定义分隔符，默认为制表符。</li>
-<li>-f ：与-d一起使用，指定显示哪个区域。</li>
-<li>-n ：取消分割多字节字符。仅和 -b 标志一起使用。如果字符的最后一个字节落在由 -b 标志的 List 参数指示的范围之内，该字符将被写出；否则，该字符将被排除</li>
-</ul>
-<pre><code>$ who
-wenchong console  Jul 14 07:22
-wenchong ttys000  Jul 14 15:09
-</code></pre>
-
-<pre><code>$ who | cut -b 26-
-07:22
-15:09
 </code></pre>
               
             </div>
@@ -233,10 +203,10 @@ wenchong ttys000  Jul 14 15:09
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../命令seq/" class="btn btn-neutral float-right" title="命令seq">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../../写作/simiki的使用/" class="btn btn-neutral float-right" title="simiki的使用">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../golang/golang生态/" class="btn btn-neutral" title="golang生态"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../PyQt5-01-环境搭建/" class="btn btn-neutral" title="PyQt5-01-环境搭建"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -262,16 +232,16 @@ wenchong ttys000  Jul 14 15:09
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../golang/golang生态/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../PyQt5-01-环境搭建/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../命令seq/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../../写作/simiki的使用/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
 
 </body>
 </html>
