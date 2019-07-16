@@ -1,10 +1,14 @@
-site_name: Data KV
+site_name: 技术杂谈
 
 # theme: windmill
 # pip install mkdocs-windmill
-theme: material
+
+#theme: material
 # pip install mkdocs-material
 
-site_description: 技术杂学
+theme: cinder
+# pip install mkdocs-cinder
+
+site_description: 各种互联网软件技术积累总结
 site_author: datakv
 site_url: https://datakv.github.io
