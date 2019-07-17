@@ -2,7 +2,7 @@ import os
 import sys
 
 
-exist=["docs","mkdocs.yml",".git"]
+exist=["mkdocs.yml",".git",".gitignore"]
 
 exist.append(sys.argv[0])
 
@@ -18,7 +18,9 @@ for line in list:
 
 # exit(0)
 
+os.system("cp -r ../ocean/docs ./")
 os.system("mkdocs build")
+os.system("rm -rf docs")
 os.system("mv site/* ./")
 
 os.system("git add *")
