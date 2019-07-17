@@ -8,7 +8,7 @@
   
   <meta name="author" content="datakv">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>使用python设置服务器共享文件 - 技术杂谈</title>
+  <title>golang 编译命令 - 技术杂谈</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u4f7f\u7528python\u8bbe\u7f6e\u670d\u52a1\u5668\u5171\u4eab\u6587\u4ef6";
-    var mkdocs_page_input_path = "python/\u4f7f\u7528python\u8bbe\u7f6e\u670d\u52a1\u5668\u5171\u4eab\u6587\u4ef6.md";
-    var mkdocs_page_url = "/python/\u4f7f\u7528python\u8bbe\u7f6e\u670d\u52a1\u5668\u5171\u4eab\u6587\u4ef6/";
+    var mkdocs_page_name = "golang \u7f16\u8bd1\u547d\u4ee4";
+    var mkdocs_page_input_path = "golang/golang\u7f16\u8bd1\u547d\u4ee4.md";
+    var mkdocs_page_url = "/golang/golang\u7f16\u8bd1\u547d\u4ee4/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -70,39 +70,45 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../golang/golang妙用channel/">golang妙用channel</a>
+    <a class="" href="../golang妙用channel/">golang妙用channel</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang条件编译/">golang条件编译</a>
+    <a class="" href="../golang条件编译/">golang条件编译</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang检查文件是否存在/">golang检查文件是否存在</a>
+    <a class="" href="../golang检查文件是否存在/">golang检查文件是否存在</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang生态/">golang生态</a>
+    <a class="" href="../golang生态/">golang生态</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang的goroutine调度机制/">golang的goroutine调度机制</a>
+    <a class="" href="../golang的goroutine调度机制/">golang的goroutine调度机制</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang第三方库/">Golang第三方库</a>
+    <a class="" href="../golang第三方库/">Golang第三方库</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">golang 编译命令</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#golang">golang 编译命令</a></li>
+    
+
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang编译命令/">golang 编译命令</a>
+    <a class="" href="../golang获取当前执行函的名/">获取当前执行函的名</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang获取当前执行函的名/">获取当前执行函的名</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../golang/获取当前进程可执行文件名字/">获取当前进程可执行文件名字</a>
+    <a class="" href="../获取当前进程可执行文件名字/">获取当前进程可执行文件名字</a>
                 </li>
     </ul>
 	    </li>
@@ -145,21 +151,9 @@
 		
     <span class="caption-text">Python</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">使用python设置服务器共享文件</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#python">使用python设置服务器共享文件</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#2019-6-7-213902">2019-6-7 21:39:02</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../python/使用python设置服务器共享文件/">使用python设置服务器共享文件</a>
                 </li>
     </ul>
 	    </li>
@@ -208,11 +202,11 @@
     
       
         
-          <li>Python &raquo;</li>
+          <li>Golang &raquo;</li>
         
       
     
-    <li>使用python设置服务器共享文件</li>
+    <li>golang 编译命令</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -222,14 +216,16 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="python">使用python设置服务器共享文件</h1>
-<h2 id="2019-6-7-213902">2019-6-7 21:39:02</h2>
-<h3 id="python3">python3方式</h3>
-<pre><code>python -m http.server 80
-</code></pre>
+                <h1 id="golang">golang 编译命令</h1>
+<pre><code>go build
 
-<h3 id="python2">python2方式</h3>
-<pre><code>python -m SimpleHTTPServer 80
+go build -gcflags &quot;-l -m&quot;    禁止函数内联,输出编译器优化策略
+
+go build -gcflags &quot;-l -m&quot;   输出编译器优化策略
+
+go build -gcflags &quot;-N -l&quot;   禁止函数内联，禁止代码优化
+
+go tool objdump -s &quot;main.TTT&quot; function.txt 查看汇编代码
 </code></pre>
               
             </div>
@@ -238,10 +234,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../写作/simiki的使用/" class="btn btn-neutral float-right" title="simiki的使用">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../golang获取当前执行函的名/" class="btn btn-neutral float-right" title="获取当前执行函的名">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../pyqt/PyQt5-02-定义按钮事件/" class="btn btn-neutral" title="PyQt5-02-定义按钮事件"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../golang第三方库/" class="btn btn-neutral" title="Golang第三方库"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -267,10 +263,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../pyqt/PyQt5-02-定义按钮事件/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../golang第三方库/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../写作/simiki的使用/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../golang获取当前执行函的名/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

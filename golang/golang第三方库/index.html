@@ -8,7 +8,7 @@
   
   <meta name="author" content="datakv">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>simiki的使用 - 技术杂谈</title>
+  <title>Golang第三方库 - 技术杂谈</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "simiki\u7684\u4f7f\u7528";
-    var mkdocs_page_input_path = "\u5199\u4f5c/simiki\u7684\u4f7f\u7528.md";
-    var mkdocs_page_url = "/\u5199\u4f5c/simiki\u7684\u4f7f\u7528/";
+    var mkdocs_page_name = "Golang\u7b2c\u4e09\u65b9\u5e93";
+    var mkdocs_page_input_path = "golang/golang\u7b2c\u4e09\u65b9\u5e93.md";
+    var mkdocs_page_url = "/golang/golang\u7b2c\u4e09\u65b9\u5e93/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -70,39 +70,42 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../golang/golang妙用channel/">golang妙用channel</a>
+    <a class="" href="../golang妙用channel/">golang妙用channel</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang条件编译/">golang条件编译</a>
+    <a class="" href="../golang条件编译/">golang条件编译</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang检查文件是否存在/">golang检查文件是否存在</a>
+    <a class="" href="../golang检查文件是否存在/">golang检查文件是否存在</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang生态/">golang生态</a>
+    <a class="" href="../golang生态/">golang生态</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang的goroutine调度机制/">golang的goroutine调度机制</a>
+    <a class="" href="../golang的goroutine调度机制/">golang的goroutine调度机制</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Golang第三方库</a>
+    <ul class="subnav">
+            
+    </ul>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang第三方库/">Golang第三方库</a>
+    <a class="" href="../golang编译命令/">golang 编译命令</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang编译命令/">golang 编译命令</a>
+    <a class="" href="../golang获取当前执行函的名/">获取当前执行函的名</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../golang/golang获取当前执行函的名/">获取当前执行函的名</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../golang/获取当前进程可执行文件名字/">获取当前进程可执行文件名字</a>
+    <a class="" href="../获取当前进程可执行文件名字/">获取当前进程可执行文件名字</a>
                 </li>
     </ul>
 	    </li>
@@ -156,31 +159,9 @@
 		
     <span class="caption-text">写作</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">simiki的使用</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#simiki">simiki的使用</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#install">Install</a></li>
-        
-            <li><a class="toctree-l4" href="#update">Update</a></li>
-        
-            <li><a class="toctree-l4" href="#init-site">Init Site</a></li>
-        
-            <li><a class="toctree-l4" href="#create-a-new-wiki">Create a new wiki</a></li>
-        
-            <li><a class="toctree-l4" href="#generate">Generate</a></li>
-        
-            <li><a class="toctree-l4" href="#preview">Preview</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../写作/simiki的使用/">simiki的使用</a>
                 </li>
     </ul>
 	    </li>
@@ -218,11 +199,11 @@
     
       
         
-          <li>写作 &raquo;</li>
+          <li>Golang &raquo;</li>
         
       
     
-    <li>simiki的使用</li>
+    <li>Golang第三方库</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -232,29 +213,121 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="simiki">simiki的使用</h1>
-<p>2019-03-29</p>
-<hr />
-<h3 id="install">Install</h3>
-<pre><code>pip install simiki
-</code></pre>
-<h3 id="update">Update</h3>
-<pre><code>pip install -U simiki
-</code></pre>
-<h3 id="init-site">Init Site</h3>
-<pre><code>mkdir mywiki &amp;&amp; cd mywiki
-simiki init
-</code></pre>
-<h3 id="create-a-new-wiki">Create a new wiki</h3>
-<pre><code>simiki new -t "Hello Simiki" -c first-catetory
-</code></pre>
-<h3 id="generate">Generate</h3>
-<pre><code>simiki g
-</code></pre>
-<h3 id="preview">Preview</h3>
-<pre><code>simiki p -w
-    默认地址：127.0.0.1:8000
-simiki p --host 0.0.0.0 --port 8888
+                <pre><code>
+go get -u -v github.com/Arafatk/DataViz
+go get -u -v github.com/astaxie/beego
+go get -u -v github.com/atotto/clipboard
+go get -u -v github.com/awalterschulze/gographviz
+go get -u -v github.com/axgle/mahonia
+go get -u -v github.com/badgerodon/collections
+go get -u -v github.com/bitly/go-simplejson
+go get -u -v github.com/blevesearch/bleve
+go get -u -v github.com/blevesearch/bleve
+go get -u -v github.com/cayleygraph/cayley
+go get -u -v github.com/cjbassi/gotop
+go get -u -v github.com/coocood/freecache
+go get -u -v github.com/coreos/etcd
+go get -u -v github.com/davecheney/httpstat
+go get -u -v github.com/derekparker/delve
+go get -u -v github.com/derekparker/delve/cmd/dlv
+go get -u -v github.com/esimov/diagram
+go get -u -v github.com/floyernick/Data-Structures-and-Algorithms
+go get -u -v github.com/fvbock/endless
+go get -u -v github.com/garyburd/redigo
+go get -u -v github.com/gin-gonic/gin
+go get -u -v github.com/go-ego/re 
+go get -u -v github.com/go-ego/riot
+go get -u -v github.com/go-vgo/robotgo
+go get -u -v github.com/gobuffalo/packr
+go get -u -v github.com/gogits/gogs
+go get -u -v github.com/gogo/protobuf/protoc-gen-gofast
+go get -u -v github.com/gogo/protobuf/protoc-gen-gogo
+go get -u -v github.com/goinbox/color
+go get -u -v github.com/goinbox/crypto
+go get -u -v github.com/goinbox/encoding
+go get -u -v github.com/goinbox/exception
+go get -u -v github.com/goinbox/go-nsq-mate
+go get -u -v github.com/goinbox/gobox-demo
+go get -u -v github.com/goinbox/gohttp
+go get -u -v github.com/goinbox/golog
+go get -u -v github.com/goinbox/gomisc
+go get -u -v github.com/goinbox/inotify
+go get -u -v github.com/goinbox/levelcache
+go get -u -v github.com/goinbox/mongo
+go get -u -v github.com/goinbox/mysql
+go get -u -v github.com/goinbox/page
+go get -u -v github.com/goinbox/pidfile
+go get -u -v github.com/goinbox/pool
+go get -u -v github.com/goinbox/redis
+go get -u -v github.com/goinbox/shardmap
+go get -u -v github.com/goinbox/shell
+go get -u -v github.com/goinbox/simplecache
+go get -u -v github.com/golang/dep
+go get -u -v github.com/golang/lint/golint
+go get -u -v github.com/golang/protobuf/proto
+go get -u -v github.com/golang/protobuf/protoc-gen-go
+go get -u -v github.com/gonum/plot
+go get -u -v github.com/google/gopacket
+go get -u -v github.com/gorilla/mux
+go get -u -v github.com/grafana/grafana
+go get -u -v github.com/grant/go-diagram
+go get -u -v github.com/henrylee2cn/pholcus
+go get -u -v github.com/hirokidaichi/goviz
+go get -u -v github.com/huichen/wukong
+go get -u -v github.com/ilikeorangutans/grails-service-visualizer
+go get -u -v github.com/influxdata/influxdb
+go get -u -v github.com/jinzhu/gorm
+go get -u -v github.com/jmhodges/levigo
+go get -u -v github.com/jroimartin/gocui
+go get -u -v github.com/json-iterator/go
+go get -u -v github.com/julienschmidt/httprouter
+go get -u -v github.com/kardianos/govendor
+go get -u -v github.com/knrt10/asciiConvert
+go get -u -v github.com/larspensjo/config
+go get -u -v github.com/lukehoban/go-outline
+go get -u -v github.com/mailru/easyjson
+go get -u -v github.com/Masterminds/go-in-practice
+go get -u -v github.com/matryer/try
+go get -u -v github.com/mattbaird/elastigo
+go get -u -v github.com/mattes/go-asciibot
+go get -u -v github.com/mb-14/gomarkov
+go get -u -v github.com/mholt/caddy
+go get -u -v github.com/muesli/gamut
+go get -u -v github.com/myntra/golimit
+go get -u -v github.com/newhook/go-symbols
+go get -u -v github.com/nsf/gocode
+go get -u -v github.com/nsqio/nsq
+go get -u -v github.com/olivere/elastic
+go get -u -v github.com/PuerkitoBio/goquery
+go get -u -v github.com/robertkrimen/otto
+go get -u -v github.com/robfig/cron
+go get -u -v github.com/rogpeppe/godef
+go get -u -v github.com/rqlite/rqlite 
+go get -u -v github.com/ruben2020/tags2uml
+go get -u -v github.com/samuel/go-zookeeper
+go get -u -v github.com/sanity-io/litter
+go get -u -v github.com/senorprogrammer/wtf
+go get -u -v github.com/sgreben/jp/cmd/jp
+go get -u -v github.com/Shopify/sarama
+go get -u -v github.com/Sirupsen/logrus
+go get -u -v github.com/spf13/cobra
+go get -u -v github.com/spf13/hugo
+go get -u -v github.com/spf13/viper
+go get -u -v github.com/sqs/goreturns
+go get -u -v github.com/syncthing/syncthing
+go get -u -v github.com/syndtr/goleveldb
+go get -u -v github.com/tfriedel6/canvas/sdlcanvas
+go get -u -v github.com/tpng/gopkgs
+go get -u -v github.com/TrueFurby/go-callvis
+go get -u -v github.com/urfave/negroni
+go get -u -v github.com/vdobler/chart
+go get -u -v github.com/vmihailenco/msgpack
+go get -u -v github.com/vrischmann/go-metrics-influxdb
+go get -u -v github.com/wcharczuk/go-chart
+go get -u -v github.com/wvanbergen/kazoo-go
+go get -u -v github.com/xlab/treeprint
+
+
 </code></pre>
               
             </div>
@@ -263,10 +336,10 @@ simiki p --host 0.0.0.0 --port 8888
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../职场/如何用沟通解决的工作问题/" class="btn btn-neutral float-right" title="如何用沟通解决的工作问题">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../golang编译命令/" class="btn btn-neutral float-right" title="golang 编译命令">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../python/使用python设置服务器共享文件/" class="btn btn-neutral" title="使用python设置服务器共享文件"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../golang的goroutine调度机制/" class="btn btn-neutral" title="golang的goroutine调度机制"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -292,10 +365,10 @@ simiki p --host 0.0.0.0 --port 8888
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../python/使用python设置服务器共享文件/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../golang的goroutine调度机制/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../职场/如何用沟通解决的工作问题/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../golang编译命令/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
