@@ -244,16 +244,18 @@
             <div class="section">
               
                 <h1 id="_1">获取当前执行函的名</h1>
-<p>···</p>
-<p>import (
-    "runtime"
-)</p>
-<p>func GetFuncname() (name string) {
-    pc, <em>, </em>, _ := runtime.Caller(1)
+<pre><code>
+import (
+    &quot;runtime&quot;
+)
+
+func GetFuncname() (name string) {
+    pc, _, _, _ := runtime.Caller(1)
     name = runtime.FuncForPC(pc).Name()
     return
-}</p>
-<p>···</p>
+}
+
+</code></pre>
               
             </div>
           </div>
