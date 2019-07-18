@@ -1,5 +1,11 @@
 site_name: IT杂谈
 
+
+theme:
+    name: readthedocs
+#    highlightjs: true
+
+
 # theme: windmill # 顶层导航
 # pip install mkdocs-windmill
 
@@ -18,13 +24,14 @@ site_name: IT杂谈
 # heme: ivory
 # pip install mkdocs-ivory
 
-theme:
-    name: readthedocs
-#    highlightjs: true
-
 site_description: 各种互联网软件技术积累总结
 site_author: datakv
 site_url: https://datakv.github.io
 
 #nav:
 #  - Home: index.md
+
+plugins:
+    - search
+    - awesome-pages
+# pip install mkdocs-awesome-pages-plugin
