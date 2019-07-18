@@ -6,6 +6,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://datakv.github.io/etcd/raft算法/</loc>
+     <lastmod>2019-07-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://datakv.github.io/git/SSH Key 生成步骤/</loc>
      <lastmod>2019-07-18</lastmod>
      <changefreq>daily</changefreq>
@@ -56,6 +61,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://datakv.github.io/leveldb/结构/</loc>
+     <lastmod>2019-07-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://datakv.github.io/linux/命令cut/</loc>
      <lastmod>2019-07-18</lastmod>
      <changefreq>daily</changefreq>
@@ -76,12 +86,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://datakv.github.io/mysql/事物隔离级别/</loc>
+     <lastmod>2019-07-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://datakv.github.io/pyqt/PyQt5-01-环境搭建/</loc>
      <lastmod>2019-07-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://datakv.github.io/pyqt/PyQt5-02-定义按钮事件/</loc>
+     <lastmod>2019-07-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://datakv.github.io/python/Jupyter的使用/</loc>
      <lastmod>2019-07-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -106,12 +126,22 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://datakv.github.io/操作系统/进程调度/</loc>
+     <lastmod>2019-07-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://datakv.github.io/数据结构与算法/排序/快排/</loc>
      <lastmod>2019-07-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://datakv.github.io/数据结构与算法/查找/二分查找/</loc>
+     <lastmod>2019-07-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://datakv.github.io/网络/tcpip协议族/</loc>
      <lastmod>2019-07-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
