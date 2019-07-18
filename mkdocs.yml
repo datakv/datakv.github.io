@@ -1,6 +1,6 @@
 site_name: IT杂谈
 
-theme: windmill # 顶层导航
+# theme: windmill # 顶层导航
 # pip install mkdocs-windmill
 
 #theme: material # 左侧导航 但是又弹效果
@@ -18,7 +18,7 @@ theme: windmill # 顶层导航
 # heme: ivory
 # pip install mkdocs-ivory
 
- theme:
+theme:
     name: readthedocs
 #    highlightjs: true
 

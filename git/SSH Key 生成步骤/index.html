@@ -1,61 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <meta name="author" content="datakv">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>ssh-keygen 生成步骤 - IT杂谈</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="author" content="datakv">
-    <link rel="canonical" href="https://datakv.github.io/git/SSH Key 生成步骤/">
-    <link rel="shortcut icon" href="../../img/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>ssh-keygen 生成步骤 - IT杂谈</title>
-    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
-    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
-    <link href="../../css/base.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/highlight.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
-    <script src="../../js/jquery-3.2.1.min.js"></script>
-    <script src="../../js/bootstrap-3.3.7.min.js"></script>
-    <script src="../../js/highlight.pack.js"></script>
-    
-    <base target="_top">
-    <script>
-      var base_url = '../..';
-      var is_top_frame = false;
-        
-        var pageToc = [
-          {title: "ssh-keygen \u751f\u6210\u6b65\u9aa4", url: "#_top", children: [
-              {title: "\u4e00 \u3001\u8bbe\u7f6eGit\u7684user name\u548cemail\uff1a", url: "#gituser-nameemail" },
-              {title: "\u4e8c\u3001\u751f\u6210SSH\u5bc6\u94a5\u8fc7\u7a0b\uff1a", url: "#ssh" },
-          ]},
-        ];
-
-    </script>
-    <script src="../../js/base.js"></script> 
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ssh-keygen \u751f\u6210\u6b65\u9aa4";
+    var mkdocs_page_input_path = "git/SSH Key \u751f\u6210\u6b65\u9aa4.md";
+    var mkdocs_page_url = "/git/SSH Key \u751f\u6210\u6b65\u9aa4/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
 </head>
 
-<body>
-<script>
-if (is_top_frame) { $('body').addClass('wm-top-page'); }
-</script>
+<body class="wy-body-for-nav" role="document">
 
-
-
-<div class="container-fluid wm-page-content">
-  <a name="_top"></a>
-    
+  <div class="wy-grid-for-nav">
 
     
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> IT杂谈</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
 
-    <h1 id="ssh-keygen">ssh-keygen 生成步骤</h1>
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Etcd</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../etcd/raft算法/">Raft算法</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Git</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">ssh-keygen 生成步骤</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#ssh-keygen">ssh-keygen 生成步骤</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#gituser-nameemail">一 、设置Git的user name和email：</a></li>
+        
+            <li><a class="toctree-l4" href="#ssh">二、生成SSH密钥过程：</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Golang</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../golang/golang妙用channel/">golang妙用channel</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/golang条件编译/">golang条件编译</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/golang检查文件是否存在/">golang检查文件是否存在</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/golang生态/">golang生态</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/golang的goroutine调度机制/">golang的goroutine调度机制</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/golang第三方库/">Golang第三方库</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/golang编译命令/">golang 编译命令</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/golang获取当前执行函的名/">获取当前执行函的名</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../golang/获取当前进程可执行文件名字/">获取当前进程可执行文件名字</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Leveldb</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../leveldb/结构/">结构</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Linux</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../linux/命令cut/">命令cut</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../linux/命令seq/">命令seq</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../linux/性能观测/">性能观测</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mac使用</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mac使用/u盘不可写的问题/">u盘不可写的问题</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Mysql</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../mysql/事物隔离级别/">事物隔离级别</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Pyqt</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../pyqt/PyQt5-01-环境搭建/">PyQt5-01-环境搭建</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../pyqt/PyQt5-02-定义按钮事件/">PyQt5-02-定义按钮事件</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Python</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../python/Jupyter的使用/">Jupyter的使用</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../python/python使用linux管道/">python使用linux管道</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../python/使用python设置服务器共享文件/">使用python设置服务器共享文件</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Web</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../web/Apache与Nginx的优缺点比较/">Apache与Nginx的优缺点比较</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">写作</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../写作/simiki的使用/">simiki的使用</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">操作系统</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../操作系统/进程调度/">进程调度</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">数据结构与算法</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <span class="caption-text">排序</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../数据结构与算法/排序/快排/">快排</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">查找</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../数据结构与算法/查找/二分查找/">二分查找</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">网络</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../网络/tcpip协议族/">Tcpip协议族</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">职场</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../职场/如何用沟通解决的工作问题/">如何用沟通解决的工作问题</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">IT杂谈</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Git &raquo;</li>
+        
+      
+    
+    <li>ssh-keygen 生成步骤</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ssh-keygen">ssh-keygen 生成步骤</h1>
 <p>Git是分布式的代码管理工具，远程的代码管理是基于SSH的，所以要使用远程的Git则需要SSH的配置。
 github的SSH配置如下：</p>
 <h3 id="gituser-nameemail">一 、设置Git的user name和email：</h3>
@@ -85,16 +366,52 @@ Are you sure you want to continue connecting (yes/no)? yes
 Warning: Permanently added ‘github.com,207.97.227.239′ (RSA) to the list of known hosts.
 ERROR: Hi tekkub! You’ve successfully authenticated, but GitHub does not provide shell access
 Connection to github.com closed.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../golang/golang妙用channel/" class="btn btn-neutral float-right" title="golang妙用channel">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../etcd/raft算法/" class="btn btn-neutral" title="Raft算法"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <br>
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
     
+  </div>
 
-    <br>
-</div>
-
-<footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../etcd/raft算法/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../golang/golang妙用channel/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>
