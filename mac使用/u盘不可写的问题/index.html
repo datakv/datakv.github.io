@@ -8,7 +8,7 @@
   
   <meta name="author" content="datakv">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>simiki的使用 - IT杂谈</title>
+  <title>u盘不可写的问题 - IT杂谈</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "simiki\u7684\u4f7f\u7528";
-    var mkdocs_page_input_path = "\u5199\u4f5c/simiki\u7684\u4f7f\u7528.md";
-    var mkdocs_page_url = "/\u5199\u4f5c/simiki\u7684\u4f7f\u7528/";
+    var mkdocs_page_name = "u\u76d8\u4e0d\u53ef\u5199\u7684\u95ee\u9898";
+    var mkdocs_page_input_path = "mac\u4f7f\u7528/u\u76d8\u4e0d\u53ef\u5199\u7684\u95ee\u9898.md";
+    var mkdocs_page_url = "/mac\u4f7f\u7528/u\u76d8\u4e0d\u53ef\u5199\u7684\u95ee\u9898/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js" defer></script>
@@ -130,9 +130,15 @@
 		
     <span class="caption-text">Mac使用</span>
     <ul class="subnav">
-                <li class="">
+                <li class=" current">
                     
-    <a class="" href="../../mac使用/u盘不可写的问题/">u盘不可写的问题</a>
+    <a class="current" href="./">u盘不可写的问题</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#u">u盘不可写的问题</a></li>
+    
+
+    </ul>
                 </li>
     </ul>
 	    </li>
@@ -182,31 +188,9 @@
 		
     <span class="caption-text">写作</span>
     <ul class="subnav">
-                <li class=" current">
+                <li class="">
                     
-    <a class="current" href="./">simiki的使用</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l3"><a href="#simiki">simiki的使用</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l4" href="#install">Install</a></li>
-        
-            <li><a class="toctree-l4" href="#update">Update</a></li>
-        
-            <li><a class="toctree-l4" href="#init-site">Init Site</a></li>
-        
-            <li><a class="toctree-l4" href="#create-a-new-wiki">Create a new wiki</a></li>
-        
-            <li><a class="toctree-l4" href="#generate">Generate</a></li>
-        
-            <li><a class="toctree-l4" href="#preview">Preview</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../../写作/simiki的使用/">simiki的使用</a>
                 </li>
     </ul>
 	    </li>
@@ -271,11 +255,11 @@
     
       
         
-          <li>写作 &raquo;</li>
+          <li>Mac使用 &raquo;</li>
         
       
     
-    <li>simiki的使用</li>
+    <li>u盘不可写的问题</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -285,30 +269,16 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="simiki">simiki的使用</h1>
-<p>2019-03-29</p>
-<hr />
-<h3 id="install">Install</h3>
-<pre><code>pip install simiki
+                <h1 id="u">u盘不可写的问题</h1>
+<pre><code>将U盘格式化成exFAT格式
 </code></pre>
-<h3 id="update">Update</h3>
-<pre><code>pip install -U simiki
-</code></pre>
-<h3 id="init-site">Init Site</h3>
-<pre><code>mkdir mywiki &amp;&amp; cd mywiki
-simiki init
-</code></pre>
-<h3 id="create-a-new-wiki">Create a new wiki</h3>
-<pre><code>simiki new -t "Hello Simiki" -c first-catetory
-</code></pre>
-<h3 id="generate">Generate</h3>
-<pre><code>simiki g
-</code></pre>
-<h3 id="preview">Preview</h3>
-<pre><code>simiki p -w
-    默认地址：127.0.0.1:8000
-simiki p --host 0.0.0.0 --port 8888
-</code></pre>
+
+<p>NTFS适合于磁盘，exFAT适合于闪存盘。</p>
+<p>1、NTFS是日志式系统，不适合在U盘上使用，会大幅度缩短寿命。</p>
+<p>2、exFAT是微软特别为U盘推出的专用格式，解决了FAT32不能保存大于4GB的文件的限制。但兼容性不像FAT32好。 </p>
+<p>3、考虑到U盘的寿命问题，exFAT比NTFS要好。</p>
+<p>扩展资料：</p>
+<p>两种格式都突破存储单个文件不能大于4GB的限制。 但是，目前exFAT属于新格式，各种配套技术还跟不上，比如针对数据恢复的软件还在研究中，一旦exFAT格式的U盘要恢复数据，暂时是没办法的。</p>
               
             </div>
           </div>
@@ -316,10 +286,10 @@ simiki p --host 0.0.0.0 --port 8888
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../数据结构与算法/排序/快排/" class="btn btn-neutral float-right" title="快排">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../pyqt/PyQt5-01-环境搭建/" class="btn btn-neutral float-right" title="PyQt5-01-环境搭建">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../web/Apache与Nginx的优缺点比较/" class="btn btn-neutral" title="Apache与Nginx的优缺点比较"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../linux/性能观测/" class="btn btn-neutral" title="性能观测"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -345,10 +315,10 @@ simiki p --host 0.0.0.0 --port 8888
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../web/Apache与Nginx的优缺点比较/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../linux/性能观测/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../数据结构与算法/排序/快排/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../pyqt/PyQt5-01-环境搭建/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
