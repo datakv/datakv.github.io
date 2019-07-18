@@ -12,9 +12,12 @@ site_name: IT杂谈
 # theme: rtd-dropdown
 # pip install mkdocs-rtd-dropdown
 
-theme:
-    name: readthedocs
-    highlightjs: true
+theme: alabaster
+# pip install mkdocs-alabaster
+
+# theme:
+#    name: readthedocs
+#    highlightjs: true
 
 site_description: 各种互联网软件技术积累总结
 site_author: datakv
