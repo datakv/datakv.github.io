@@ -18,13 +18,13 @@ theme: windmill # 顶层导航
 # heme: ivory
 # pip install mkdocs-ivory
 
-# theme:
-#    name: readthedocs
+ theme:
+    name: readthedocs
 #    highlightjs: true
 
 site_description: 各种互联网软件技术积累总结
 site_author: datakv
 site_url: https://datakv.github.io
 
-nav:
-  - Home: index.md
+#nav:
+#  - Home: index.md
