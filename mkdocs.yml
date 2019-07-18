@@ -25,3 +25,6 @@ theme: windmill # 顶层导航
 site_description: 各种互联网软件技术积累总结
 site_author: datakv
 site_url: https://datakv.github.io
+
+nav:
+  - Home: index.md
