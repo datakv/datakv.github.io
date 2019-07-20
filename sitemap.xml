@@ -96,16 +96,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://datakv.github.io/pyqt/PyQt5-01-环境搭建/</loc>
-     <lastmod>2019-07-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://datakv.github.io/pyqt/PyQt5-02-定义按钮事件/</loc>
-     <lastmod>2019-07-20</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://datakv.github.io/python/Jupyter的使用/</loc>
      <lastmod>2019-07-20</lastmod>
      <changefreq>daily</changefreq>
@@ -117,6 +107,16 @@
     </url>
     <url>
      <loc>https://datakv.github.io/python/使用python设置服务器共享文件/</loc>
+     <lastmod>2019-07-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://datakv.github.io/python/pyqt/PyQt5-01-环境搭建/</loc>
+     <lastmod>2019-07-20</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://datakv.github.io/python/pyqt/PyQt5-02-定义按钮事件/</loc>
      <lastmod>2019-07-20</lastmod>
      <changefreq>daily</changefreq>
     </url>
