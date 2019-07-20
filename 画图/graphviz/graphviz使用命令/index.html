@@ -81,6 +81,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#_1" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -968,6 +972,18 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../dot语言基本语法/" title="Dot语言基本语法" class="md-nav__link">
+      Dot语言基本语法
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -976,9 +992,50 @@
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
     
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Graphviz使用命令
+      </label>
+    
     <a href="./" title="Graphviz使用命令" class="md-nav__link md-nav__link--active">
       Graphviz使用命令
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="命令" class="md-nav__link">
+    命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="引擎" class="md-nav__link">
+    引擎
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="类型" class="md-nav__link">
+    类型
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1216,6 +1273,49 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="命令" class="md-nav__link">
+    命令
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="引擎" class="md-nav__link">
+    引擎
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" title="类型" class="md-nav__link">
+    类型
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -1224,7 +1324,62 @@
                 
                   <h1>Graphviz使用命令</h1>
                 
-                
+                <h3 id="_1">命令</h3>
+<pre><code class="markdown">&lt;engine&gt; -T&lt;type&gt; -o&lt;outfile&gt; &lt;infile.dot&gt;
+</code></pre>
+
+<p>示例：</p>
+<pre><code class="markdown">
+
+dot -Tpng -o hello.png tmp.dot
+
+</code></pre>
+
+<h3 id="_2">引擎</h3>
+<ol>
+<li>
+<p>dot - "hierarchical" or layered drawings of directed graphs. This is the default tool to use if edges have directionality.</p>
+</li>
+<li>
+<p>neato - "spring model'' layouts.  This is the default tool to use if the graph is not too large (about 100 nodes) and you don't know anything else about it. Neato attempts to minimize a global energy function, which is equivalent to statistical multi-dimensional scaling.</p>
+</li>
+<li>
+<p>fdp - "spring model'' layouts similar to those of neato, but does this by reducing forces rather than working with energy.</p>
+</li>
+<li>
+<p>sfdp - multiscale version of fdp for the layout of large graphs.</p>
+</li>
+<li>
+<p>twopi - radial layouts, after Graham Wills 97. Nodes are placed on concentric circles depending their distance from a given root node.</p>
+</li>
+<li>
+<p>circo  circular layout, after Six and Tollis 99, Kauffman and Wiese 02. This is suitable for certain diagrams of multiple cyclic structures, such as certain telecommunications networks.</p>
+</li>
+<li>
+<p>osage</p>
+</li>
+</ol>
+<h3 id="_3">类型</h3>
+<pre><code>-Tps (PostScript),
+
+-Tsvg -Tsvgz (Structured Vector Graphics), 
+
+-Tfig (XFIG  graphics), 
+
+-Tmif  (FrameMaker graphics),
+
+-Thpgl (HP pen plotters),
+
+-Tpcl (Laserjet printers),
+
+-Tpng -Tgif (bitmap graphics),
+
+-Tdia (GTK+ based diagrams),
+
+-Timap (imagemap files for httpd servers for each node or edge  that  has a non-null &quot;href&quot; attribute.),
+
+-Tcmapx (client-side imagemap for use in html and xhtml).
+</code></pre>
                 
                   
                 
@@ -1245,7 +1400,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../../数据结构与算法/查找/二分查找/" title="二分查找" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dot语言基本语法/" title="Dot语言基本语法" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1254,7 +1409,7 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                二分查找
+                Dot语言基本语法
               </span>
             </div>
           </a>
