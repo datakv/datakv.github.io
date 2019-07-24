@@ -42,7 +42,7 @@
     
     
       
-        <title>Raft算法 - IT杂谈</title>
+        <title>raft算法 - IT杂谈</title>
       
     
     
@@ -81,6 +81,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#raft" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -103,7 +107,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Raft算法
+                raft算法
               
             </span>
           
@@ -282,10 +286,55 @@
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
     
-    <a href="./" title="Raft算法" class="md-nav__link md-nav__link--active">
-      Raft算法
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        raft算法
+      </label>
+    
+    <a href="./" title="raft算法" class="md-nav__link md-nav__link--active">
+      raft算法
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="简介" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="动画演示" class="md-nav__link">
+    动画演示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leader-election" title="leader election" class="md-nav__link">
+    leader election
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
     
   </li>
 
@@ -1478,15 +1527,70 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" title="简介" class="md-nav__link">
+    简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" title="动画演示" class="md-nav__link">
+    动画演示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leader-election" title="leader election" class="md-nav__link">
+    leader election
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>Raft算法</h1>
-                
-                
+                <h1 id="raft">raft算法</h1>
+<h3 id="_1">简介</h3>
+<p>raft是一个共识算法（consensus algorithm），所谓共识，就是多个节点对某个事情达成一致的看法，即使是在部分节点故障、网络延时、网络分割的情况下。这些年最为火热的加密货币（比特币、区块链）就需要共识算法，而在分布式系统中，共识算法更多用于提高系统的容错性，比如分布式存储中的复制集（replication），在带着问题学习分布式系统之中心化复制集一文中介绍了中心化复制集的相关知识。raft协议就是一种leader-based的共识算法，与之相应的是leaderless的共识算法。</p>
+<h3 id="_2">动画演示</h3>
+<p><a href="http://thesecretlivesofdata.com/raft/">http://thesecretlivesofdata.com/raft/</a></p>
+<h3 id="leader-election">leader election</h3>
+<p>raft协议中，一个节点任一时刻处于以下三个状态之一：</p>
+<p>leader
+follower
+candidate
+   给出状态转移图能很直观的直到这三个状态的区别</p>
+<p>可以看出所有节点启动时都是follower状态；在一段时间内如果没有收到来自leader的心跳，从follower切换到candidate，发起选举；如果收到majority的造成票（含自己的一票）则切换到leader状态；如果发现其他节点比自己更新，则主动切换到follower。</p>
+<p>总之，系统中最多只有一个leader，如果在一段时间里发现没有leader，则大家通过选举-投票选出leader。leader会不停的给follower发心跳消息，表明自己的存活状态。如果leader故障，那么follower会转换成candidate，重新选出leader。</p>
                 
                   
                 
