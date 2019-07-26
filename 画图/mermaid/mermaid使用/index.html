@@ -1371,6 +1371,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nodejs" title="nodejs方式" class="md-nav__link">
+    nodejs方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#vscode" title="vscode" class="md-nav__link">
     vscode
   </a>
@@ -1378,29 +1385,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="代码包含方式" class="md-nav__link">
-    代码包含方式
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="流程图" class="md-nav__link">
-    流程图
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="序列图" class="md-nav__link">
-    序列图
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="甘特图" class="md-nav__link">
-    甘特图
+  <a href="#md" title="md代码包含方式" class="md-nav__link">
+    md代码包含方式
   </a>
   
 </li>
@@ -1675,6 +1661,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#nodejs" title="nodejs方式" class="md-nav__link">
+    nodejs方式
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#vscode" title="vscode" class="md-nav__link">
     vscode
   </a>
@@ -1682,29 +1675,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" title="代码包含方式" class="md-nav__link">
-    代码包含方式
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" title="流程图" class="md-nav__link">
-    流程图
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" title="序列图" class="md-nav__link">
-    序列图
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" title="甘特图" class="md-nav__link">
-    甘特图
+  <a href="#md" title="md代码包含方式" class="md-nav__link">
+    md代码包含方式
   </a>
   
 </li>
@@ -1732,6 +1704,19 @@
 <p><a href="https://mermaidjs.github.io/">https://mermaidjs.github.io/</a></p>
 <h3 id="_2">在线编辑</h3>
 <p><a href="https://mermaidjs.github.io/mermaid-live-editor">https://mermaidjs.github.io/mermaid-live-editor</a></p>
+<h3 id="nodejs">nodejs方式</h3>
+<ol>
+<li>安装</li>
+</ol>
+<pre><code>npm install -g phantomjs &amp;&amp; npm install -g mermaid
+</code></pre>
+
+<ol>
+<li>生成图片</li>
+</ol>
+<pre><code>mermaid demo.gantt -w 1920 -s -p -o images
+</code></pre>
+
 <h3 id="vscode">vscode</h3>
 <ol>
 <li>
@@ -1744,7 +1729,7 @@
 <p>"view"-&gt;"Command Palette" 输入Mermaid 选中</p>
 </li>
 </ol>
-<h3 id="_3">代码包含方式</h3>
+<h3 id="md">md代码包含方式</h3>
 <ul>
 <li>html标签</li>
 </ul>
@@ -1768,49 +1753,6 @@ sequenceDiagram
     sequenceDiagram
       A--&gt;B: Works!
     ```
-
-</code></pre>
-
-<h3 id="_4">流程图</h3>
-<pre><code class="mermaid">graph TD;
-    A--&gt;B;
-    A--&gt;C;
-    B--&gt;D;
-    C--&gt;D;
-</code></pre>
-
-<h3 id="_5">序列图</h3>
-<pre><code class="mermaid">
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice-&gt;John: Hello John, how are you?
-    loop Healthcheck
-        John-&gt;John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts &lt;br/&gt;prevail...
-    John--&gt;Alice: Great!
-    John-&gt;Bob: How about you?
-    Bob--&gt;John: Jolly good!
-
-</code></pre>
-
-<h3 id="_6">甘特图</h3>
-<pre><code class="mermaid">gantt
-    dateFormat  YY-MM-DD
-    title Adding GANTT diagram functionality to mermaid
-    section A section
-    Completed task :done,    des1, 14-01-06,14-01-08
-    Active task               :active,  des2, 14-01-09, 3d
-    Future task               :         des3, after des2, 5d
-    Future task2               :         des4, after des3, 5d
-    section Critical tasks
-    Completed task in the critical line :crit, done, 14-01-06,24h
-    Implement parser and jison          :crit, done, after des1, 2d
-    Create tests for parser             :crit, active, 3d
-    Future task in critical line        :crit, 5d
-    Create tests for renderer           :2d
-    Add to mermaid                      :1d
 
 </code></pre>
                 
