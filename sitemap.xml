@@ -86,6 +86,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://datakv.github.io/linux/ln 命令/</loc>
+     <lastmod>2019-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://datakv.github.io/linux/shell相关资源/</loc>
      <lastmod>2019-07-27</lastmod>
      <changefreq>daily</changefreq>
@@ -102,6 +107,11 @@
     </url>
     <url>
      <loc>https://datakv.github.io/linux/命令seq/</loc>
+     <lastmod>2019-07-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://datakv.github.io/linux/命令wc/</loc>
      <lastmod>2019-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -251,7 +261,7 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://datakv.github.io/画图/plantuml/常用链接/</loc>
+     <loc>https://datakv.github.io/画图/plantuml/plantuml使用/</loc>
      <lastmod>2019-07-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
